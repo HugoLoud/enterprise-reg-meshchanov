@@ -21,21 +21,34 @@ Create and activate virtual environment:
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
+source .venv/bin/activate  # For Windows: .venv\Scripts\activate
+```
+
 
 Install dependencies:
+```bash
 pip install -r requirements.txt
+```
+
 
 Create a .env file with required variables:
+```env
 GENERATOR=openai
 OPENAI_API_KEY=your_key_here
 OPENAI_BASE_URL=https://api.mistral.ai/v1
 OPENAI_MODEL=mistral-small-latest
 TEAM_EMAIL=your_email
 SUBMISSION_NAME=surname_v1
+```
+
 
 Run:
+```bash
 python main.py
+```
+
+
 This will generate a submission file in the submissions/ directory.
 
 The system supports heuristic, OpenAI-compatible, and Gemini generators.
+I used Mistral API generator
